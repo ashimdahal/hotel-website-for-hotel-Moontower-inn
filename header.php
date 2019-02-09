@@ -22,7 +22,7 @@
 <ul>
   <li><a href="#">Home</a></li>
   <li><a href="#">Today's deal</a></li>
-    <li><a href="#">Rooms</a></li>
+    <li><a href="rooms.php">Rooms</a></li>
     <li><a href="#">Travels</a></li>
     <li><a href="#">About us</a></li>
 

@@ -1,0 +1,49 @@
+.login_feild {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  box-shadow: 0px 0px 20px 0px red;
+  width: 40%;
+  font-family: Abel;
+  text-align: center; }
+  .login_feild h4 {
+    border-bottom: 2px solid red;
+    font-size: 25px; }
+  .login_feild .form-input {
+    width: 80%;
+    height: 20px; }
+  .login_feild .rem_leb, .login_feild .rem_leb2 {
+    position: relative;
+    left: -30%;
+    top: 20px; }
+  .login_feild .rem_leb2 {
+    z-index: 1;
+    border: 3px solid #eee;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    position: relative;
+    left: 30%;
+    top: 22px;
+    float: left;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px #a9a1a1; }
+  .login_feild input[type="radio"] {
+    display: none; }
+  .login_feild input[type="radio"]:checked + label {
+    border: 3px solid #eee;
+    background: blue; }
+  .login_feild .submit_btn {
+    box-shadow: 0px 0px 3px 0px;
+    background: #00ffa1cf;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    height: 4vh;
+    color: #000;
+    font-weight: 800; }
+  .login_feild .submit_btn:hover {
+    box-shadow: 0px 0px 10px 0px; }
+
+/*# sourceMappingURL=admin_log.css.map */
