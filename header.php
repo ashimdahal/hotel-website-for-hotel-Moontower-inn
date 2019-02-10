@@ -4,6 +4,8 @@
   <body>
 <header>
   <head>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
   <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
@@ -24,6 +26,22 @@
       crossorigin="anonymous"></script>
     </head>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <nav class="navontop">
         <img src='all_img/logo.png' class='logo' alt='Moon Tower Inn (Birtamod) Logo'/>
     <ul>
@@ -31,7 +49,7 @@
       <li><a href="food.php">Food Menu</a></li>
         <li><a href="#">Rooms</a></li>
         <li><a href="#">Travels</a></li>
-        <li><a href="#">About us</a></li>
+        <li><a href="about.php">About us</a></li>
 
     </ul>
       </nav>
@@ -50,11 +68,37 @@
       <li><a href="food.php">Food Menu</a></li>
         <li><a href="#">Rooms</a></li>
         <li><a href="#">Travels</a></li>
-        <li><a href="#">About us</a></li>
+        <li><a href="about.php">About us</a></li>
 
     </ul>
       </nav>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

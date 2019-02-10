@@ -56,7 +56,7 @@
 </div>
 
 
-<div class="y"> <a href="#">Click Here</a> <br>     to see Whats so special <br> about our food
+<div class="y"> <a href="food.php">Click Here</a> <br>     to see Whats so special <br> about our food
 <br><h3>Taste &#9989; Quality &#9989; Hygiene &#9989;</h3> </div>
 
 </div>
