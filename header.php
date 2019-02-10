@@ -105,7 +105,7 @@
 
     </header>
     <script>
-    if ($(window).width() < 500) {
+    if ($(window).width() < 420) {
       $('.menubotton').click(function(){
              $(".navonbottom").css({
                "height":"100%",
@@ -126,7 +126,7 @@
     $('.closebtn').hide(200)
          })
   
-}else if($(window).width() > 500) {
+}else if($(window).width() > 420) {
   var lastScroll = 0;
           
          $(window).scroll(function(e){

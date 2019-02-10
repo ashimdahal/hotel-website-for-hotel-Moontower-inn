@@ -8,6 +8,12 @@
 				
 
 				<p class="footer-company-name">Hotel moontower inn &copy; 2015</p>
+				<div class="footer_to_hide">
+					<div>
+					<i class="fa fa-envelope"></i>
+					<p style="font-size: 15px;"><a href="#">moontower@gmail.com</a></p>
+				</div>
+				</div>
 			</div>
 
 			<div class="footer-center">
@@ -22,7 +28,7 @@
 					<p>980000000</p>
 				</div>
 
-				<div>
+				<div class="hide_footer">
 					<i class="fa fa-envelope"></i>
 					<p><a href="#">moontower@gmail.com</a></p>
 				</div>

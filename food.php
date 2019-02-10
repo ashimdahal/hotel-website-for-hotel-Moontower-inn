@@ -7,6 +7,9 @@ include_once 'header.php';
 <link rel="stylesheet" herf="slick/slick-theme.css">
 <link href="https://fonts.googleapis.com/css?family=Felipa" rel="stylesheet">
   <div class="kitchen_ko_wrapper">
+     <div class="kogo">
+  <img src='all_img/logo.png'  alt='Moon Tower Inn (Birtamod) Logo'/>
+  </div>
 	  <div class="everyboss">
   	<div class="d-flex justify-content-around">
   	
@@ -105,6 +108,22 @@ include_once 'header.php';
 	  </div>
 	  <div class="below_the_belt">
 		  <h1>Best food at the best price</h1>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
+
 		  <p>Taste &#9989; Quality &#9989;</p>
 		  <p>Best rates &#9989; Party items &#9989;</p>
 		  <div class="visit"">
@@ -116,7 +135,24 @@ include_once 'header.php';
 	  </div>
   </div>
    <script type="text/javascript">
- $('.d-flex').slick(
+
+    if ($(window).width() < 420) 
+    {
+      $('.d-flex').slick({
+        infinite:true,
+        slidesToShow:2,
+        slidesToScroll:2,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: false,
+        prevArrow: false,
+        nextArrow: false
+      })
+
+    }
+    else if ($(window).width() > 420) 
+    {
+         $('.d-flex').slick(
 {
   infinite: true,
   slidesToShow: 4,
@@ -126,9 +162,10 @@ include_once 'header.php';
   dots: false,
     prevArrow: false,
     nextArrow: false
-   
 }
- 	);
+  );
+    }
+
   </script>
 
   <?php

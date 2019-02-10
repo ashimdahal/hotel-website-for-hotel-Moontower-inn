@@ -5,6 +5,9 @@
 
 
 <div class="wrapper_about_us">
+     <div class="kogo">
+  <img src='all_img/logo.png'  alt='Moon Tower Inn (Birtamod) Logo'/>
+  </div>
     <div class="first_text_holder">
         <h1> Hotel Moontower Inn </h1>
         <h2>-Our Mission-</h2>
