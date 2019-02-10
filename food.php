@@ -109,22 +109,9 @@ include_once 'header.php';
 	  <div class="below_the_belt">
 		  <h1>Best food at the best price</h1>
       <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
-      <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
 
-		  <p>Taste &#9989; Quality &#9989;</p>
+
+		  <p>Taste &#9989;  Quality &#9989;</p>
 		  <p>Best rates &#9989; Party items &#9989;</p>
 		  <div class="visit"">
 			  Visit today <br>

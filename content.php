@@ -22,7 +22,7 @@
       Searching for <div class="br_on_mobile"> <br> </div> rooms? <br>
       <a href="#">Book now! <br> Before all rooms are Packed</a>
       <h3>Only For <br> RS. 2000  </h3>
-      <h4>WI-FI  ->&#9989; <div class="br_on_mobile"> <br> </div> AC  -> &#9989; <br> Hygiene ->&#9989; Attached Washrooms -> &#9989; </h4>
+      <h4>WI-FI  ->&#9989; <div class="br_on_mobile"> <br> </div> AC  -> &#9989; <br> Hygiene ->&#9989; Attached Washrooms->&#9989; </h4>
 
 
 
@@ -75,7 +75,7 @@
 
 <script>
 
-  
+
 $('.wrapper').mousemove(function(e){
 
 var mpagex = e.pageX

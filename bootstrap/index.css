@@ -609,6 +609,9 @@ color: rgb(51, 3, 3);
 }
 /*responsive for mobiles*/
 @media only screen and (max-width:420px){
+  .footer-icons{
+    display: none;
+  }
   .navontop{
     display:none;
 
@@ -690,7 +693,7 @@ color: rgb(51, 3, 3);
   line-height: 21px;
   position: absolute;
   right: 0;
-  top:67%;
+     top: 72%;
 }
 .caption .border {
   width:80%;
@@ -717,6 +720,7 @@ color: rgb(51, 3, 3);
   font-size: 20px;
   left: 0;
   width: 50%;
+   letter-spacing: 1px;
   height:45%;
 }
 .food_menu_in_home .h3{
@@ -726,8 +730,8 @@ color: rgb(51, 3, 3);
 }
 .wrapper{
   height: 50vh;
-  -webkit-animation: backmove 6s infinite; /* Safari 4.0 - 8.0 */
-  animation: backmove 6s infinite;
+  -webkit-animation: backmove 9s infinite; /* Safari 4.0 - 8.0 */
+  animation: backmove 9s infinite;
 }
 @keyframes backmove{
   20%{
@@ -776,6 +780,7 @@ color: rgb(51, 3, 3);
 }
 .footer_to_hide{
   display: block;
+  margin-top: 15px;
 }
 .footer_to_hide i{
   background-color: #33383b;
@@ -804,25 +809,75 @@ color: rgb(51, 3, 3);
 }
 .below_the_belt p{
   font-size: 20px;
+   margin-top:24px;
 }
 .visit{
   top : 42px;
   right: 22%;
+  line-height: 21px;
 }
 .first_text_holder p{
+
+
   font-size: 15px;
-  line-height: 16px;
+  line-height: 15px;
 }
 .first_text_holder{
   width:100%;
 }
 }
-@media only screen and (max-width: 360px){
+@media only screen and (max-width: 375px){
   .x h4{
-    top:60%;
-    font-size: 18px;
+    top:28vh;
+    font-size: 16;
   }
   .food_menu_in_home .y{
     letter-spacing: 1px;
   }
+  .visit{
+    line-height: 21px;
+
+  }
+  .x h3{
+    margin-top: 25%;
+  }
+}
+@media only screen and (max-width: 360px){
+  .x h4{
+    top:65%;
+    font-size: 16;
+  }
+  .below_the_belt p{
+    margin-top: 20px;
+  }
+
+ 
+}
+
+@media only screen and (max-width: 320px){
+  .caption .border{
+    padding: 2px;
+  }
+  .x h4{
+    top:27vh;
+    font-size: 16px;
+  }
+  .x h3{
+    margin-top: 7vh;
+  }
+  .kogo img{
+    width: 80%;
+  }
+  .below_the_belt h1{
+    font-size: 34px;
+  }
+  .below_the_belt p{
+    margin-top: 7px;
+    font-size: 16px;
+    text-align: right;
+  }
+  .khana_ko_holder h1{
+    font-size: 18px;
+  }
+
 }
