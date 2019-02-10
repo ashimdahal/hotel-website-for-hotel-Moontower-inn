@@ -25,6 +25,7 @@ while($row = mysqli_fetch_assoc($result)){
 	<h5>Welcome , <?php echo $name; ?> ! </h5>
 	<a href="admin_dashboard.php">Home</a>
 	<?php if($post == 'Owner' || $post == 'Manager'){
+		
 
 		?>
   <a href="employees_manage.php">Add , Remove <br>Promote Employees</a>

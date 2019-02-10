@@ -19,8 +19,8 @@ time, mark, audio, video {
     background:transparent;
 }
 
-nav{
-  z-index: 9;
+.navontop{
+  z-index: 999999999999;
   top: 0;
   width:100%;
   height:15VH;
@@ -30,18 +30,18 @@ nav{
   overflow: hidden;
 
 }
-nav ul{
+.navontop ul{
   position: absolute;
   bottom:0;
   width: 100%;
   padding: 8px;
 }
-nav ul li{
+.navontop ul li{
   float: left;
   list-style-type: none;
 margin-left:13%;
 }
-nav ul li a{
+.navontop ul li a{
   text-decoration: none;
 color:white;
 font-size: 18px;
@@ -49,13 +49,13 @@ font-weight:8;
     text-transform:uppercase;
     font-family: Raleway;
 }
-nav ul li a:hover{
+.navontop ul li a:hover{
     font-weight: bold;
 
 }
 
 }
-nav .logo{
+.navontop .logo{
   position: absolute;
   left:50%;
   top:50%;
@@ -67,17 +67,17 @@ nav .logo{
 
 .wrapper{
       transition: background-position 1s;
-      	top:0px;
-      	height:100vh;
-      	width:100%;
+        top:0px;
+        height:100vh;
+        width:100%;
         position: relative;
 
     background-repeat: no-repeat;
 
 
-    	background-position: center;
+      background-position: center;
 
-    	background:  url('https://cdn.hotelplanner.com/Common/Images/_HotelPlanner/Home-Page/fade/sld6.jpg') fixed;
+      background:  url('https://cdn.hotelplanner.com/Common/Images/_HotelPlanner/Home-Page/fade/sld6.jpg') fixed;
 
 
 }
@@ -102,44 +102,40 @@ top: 5%;
 transform: translate(-50%);
 }
 .wrapper_main .center_text{
-height: 45vh;
+height: 70vh;
 background-color: white;
+position: relative;
 box-shadow: 0px 0px 10px 0px ;
+border: 8px solid green;
 }
-
-.center_text h1{
-
-  text-align: center;
-
-  text-transform: uppercase;
-  font-size: 30px;
-  font-family:cursive;
-  letter-spacing: 3px;
-  line-height:100px;
-  color: #03035e;
-}
-.center_text h2{
-  text-align: center;
-
-  text-transform: uppercase;
-  font-size: 40px;
-  font-family:lato;
-  letter-spacing: 3px;
-  line-height: 75px;
-  font-weight: lighter;
-  color: #d00b0b;
-}
-.center_text h3{
-  text-align: center;
-
-  text-transform: uppercase;
-  font-size: 60px;
-  font-family:lato;
+.center_text a{
+  font-family: 'Muli', sans-serif;
+  font-size: 25px;
   letter-spacing: 5px;
-  line-height: 75px;
-  font-weight: bolder;
-  color: #085008;
+}.center_text a:hover{
+  color:black;
+  text-decoration: none;
 }
+.center_text .x{
+  position: absolute;
+  top:0;
+right: 0;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 12px;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+.img-thumbnail{
+  height: 32vh;
+  width: auto;
+}
+/*text on the small white box*/
+
+.holder{
+  flex: auto;
+  width: 62%;
+}
+
 .wrapper2{
 
 
@@ -157,7 +153,7 @@ background-size: cover;
  .caption2{
 z-index: 0;
    position: absolute;
-   top: 165%;
+   top: 200%;
 
    width: 100%;
 
@@ -167,6 +163,7 @@ z-index: 0;
 .caption2 .border2{
   background-color: #111;
 color: #fff;
+border:1px solid white;
 padding: 18px;
 font-size: 25px;
 letter-spacing: 10px;
@@ -174,3 +171,324 @@ position: absolute;
 top: 5%;
 transform: translate(-50%);
 }
+.navonbottom{
+display: none;
+
+}
+.dallo{
+  transition: 2s;
+  height: 100%;
+  width:100%;
+display: none;
+}
+.dallo ul{
+  width:100%;
+  height:100%;
+  background: #181716fc;
+}
+.dallo ul li{
+  list-style-type: none;
+  margin:0 auto;
+  text-align: center;
+}
+.dallo ul li a{
+  text-decoration: none;
+  font-size: 34px;
+  letter-spacing: 400;
+  line-height: 100px;
+  color: white;
+}
+.menubotton{
+  transition: 2s;
+  position: fixed;
+  width: 80px;
+  right: 2%;
+  top: 1%;
+  cursor: pointer;
+  height: 80px;
+  background-size: cover;
+  z-index: 30;
+  background-image: url('../all_img/menu.png');
+}
+.closebtn{
+  transition: 2s;
+  position: fixed;
+  width: 80px;
+  right: 2%;
+  top: 1%;
+  cursor: pointer;
+  height: 80px;
+  display: none;
+  background-size: cover;
+  z-index: 30;
+  background-image: url('../all_img/close.png');
+}
+.food_menu_in_home{
+  width: 100%;
+  height:33vh;
+  border:10px solid #54c426;
+  position: relative;
+}
+.khana{
+  height: 100%;
+  width:100%;
+  border: 1px solid black;
+  -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.khana:hover{
+  -webkit-transform:scale(1.11);
+   -moz-transform:scale(1.11);
+   -ms-transform:scale(1.11);
+   -o-transform:scale(1.11);
+    transform:scale(1.11);
+}
+.food_menu_in_home .y{
+  position: absolute;
+  top:0;
+right: 0;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 8px;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+.y h3{
+  letter-spacing: 2px;
+  font-family: 'Staatliches', cursive;
+
+}
+.x h3{
+  font-family: 'Secular One', sans-serif;
+  line-height: 48px;
+  color: red;
+  font-weight: 800;
+}
+.x h4{
+  line-height: 60px;
+    text-align: center;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-family: 'Staatliches', cursive;
+}
+.caption3{
+  z-index: 0;
+     position: absolute;
+     top: 340%;
+
+     width: 100%;
+
+     text-align: center;
+     color: #000;
+}
+.caption3 .border3{
+  background-color: #111;
+  border: 1px solid white;
+color: #fff;
+padding: 18px;
+font-size: 25px;
+letter-spacing: 10px;
+position: absolute;
+top: 5%;
+transform: translate(-50%);
+}
+.resturant_looks_at_home_page{
+  width: 100%;
+  height: 100vh;
+  background: url(../all_img/resturant.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.footer-distributed{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+
+  padding: 55px 50px;
+  
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Cookie', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  #5383d3;
+}
+
+/* Footer links */
+
+
+
+.footer-distributed .footer-company-name{
+  color:  #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  #5383d3;
+  text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+.kitchen_ko_wrapper{
+  background: url(../all_img/kitchen.JPG) fixed;
+  height:100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.kitchen_ko_wrapper .d-flex{
+  margin-left: 50%;
+  height: 60vh;
+  width: 100%;
+  overflow-x: none;
+  background-color: #ce3e1280;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  border: 2px solid rgb(167, 142, 142);
+}
+.d-flex .khana_ko_holder{
+
+height:40vh;
+
+border: 1px solid #00000000;
+border-bottom: 4px solid #4d37b100;
+width:100%;
+
+text-align: center;
+cursor: pointer;
+background-color: rgba(212, 129, 129, 0.76);
+
+}
+.khana_ko_holder img{
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid rgb(0, 0, 0);
+  height: 30vh;
+
+
+}
+
+/*
+.slick-slide{
+  border:  1px solid rgba(218, 109, 109, 0.89)
+}
+.slick-prev{
+  background-color: #89889bd5;
+  border: none;
+ 
+  display: none;
+}
+.slick-next{
+  background-color: #89889bd5;
+  border: none;
+}*/
