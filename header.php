@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <body>
+  <body >
 <header>
   <head>
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
@@ -11,7 +11,7 @@
   <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
-        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
         <title>hotel moon</title>
@@ -105,8 +105,31 @@
 
     </header>
     <script>
-    var lastScroll = 0;
-         $(window).scroll(function(event){
+    if ($(window).width() < 500) {
+      $('.menubotton').click(function(){
+             $(".navonbottom").css({
+               "height":"100%",
+               "width":"100%",
+               "position":"fixed",
+               "z-index":"85"
+           },500)
+           $(".dallo").toggle(0)
+    $('.closebtn').show(200)
+         })
+
+         $('.closebtn').click(function(){
+             $(".navonbottom").css({
+               "height":"25%",
+               "width":"25%"
+           },500)
+           $(".dallo").toggle(0)
+    $('.closebtn').hide(200)
+         })
+  
+}else if($(window).width() > 500) {
+  var lastScroll = 0;
+          
+         $(window).scroll(function(e){
              var st = $(this).scrollTop();
              if (st > 20){
                 $(".navontop").fadeOut(500)
@@ -125,8 +148,9 @@
              }
              lastScroll = st;
          });
+      
 
-         $('.menubotton').click(function(){
+      $('.menubotton').click(function(){
              $(".navonbottom").css({
                "height":"100%",
                "width":"100%"
@@ -143,5 +167,8 @@
            $(".dallo").toggle(0)
     $('.closebtn').hide(200)
          })
+}
+
+   
 
     </script>

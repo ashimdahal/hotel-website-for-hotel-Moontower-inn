@@ -18,7 +18,9 @@ time, mark, audio, video {
     vertical-align:baseline;
     background:transparent;
 }
-
+.br_on_mobile{
+  display: none;
+}
 .navontop{
   z-index: 999999999999;
   top: 0;
@@ -54,7 +56,7 @@ font-weight:8;
 
 }
 
-}
+
 .navontop .logo{
   position: absolute;
   left:50%;
@@ -514,11 +516,7 @@ letter-spacing: 0.3px;
   height: 10vh;
   background-color: wheat;
 }
-.wrapper_about_us{
-  height:100vh;
-  width: 100%;
-  background-color:rgb(2, 15, 27); 
-}
+
 .everyboss{
   height: 100%;
   width:100%;
@@ -555,4 +553,108 @@ line-height: 40px;
 font-size: 20px;
 font-weight: 900;
 color: rgb(51, 3, 3);
+}
+.wrapper_about_us{
+ 
+  position:relative;
+  width: 100%;
+  background-color:rgb(2, 15, 27); 
+}
+.first_text_holder{
+  width: 80%;
+ left: 50%;
+ transform: translate(-50%,0);
+  position: absolute;
+  top: 20vh;
+}
+@import url('https://fonts.googleapis.com/css?family=Anton');
+.first_text_holder h1{
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+
+}
+@import url('https://fonts.googleapis.com/css?family=Secular+One');
+.first_text_holder h2{
+  font-family: 'Secular One', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  line-height: 45px;
+
+}
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+.first_text_holder p{
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  line-height: 45px;
+
+}
+
+
+.kogo{
+  display: none;
+}
+/*responsive for mobiles*/
+@media only screen and (max-width:500px){
+  .navontop{
+    display:none;
+
+  }
+  .dallo{
+    display: none;
+   
+    background: #181716fc;;
+  }.navonbottom{
+    display: block;
+  }
+  .caption{
+    top:25%;
+  }
+  .kogo{
+    display: block;
+    position:fixed;
+    height:68px;
+    width: 100%;
+    z-index: 12;
+    background: rgb(17, 11, 39);
+  
+  }
+  .menubotton{
+    height:63px;
+    width: 63px;
+    right: 0;
+    top: 0;
+  }
+  .closebtn{
+    height:63px;
+    width: 63px;
+    right: 0;
+    top: 0;
+  }
+  .kogo img{
+    margin-top:12px;
+  }
+  .wrapper_main .center_text{
+    height: 50vh;
+  }
+  .center_text .holder{
+    width: 100%;
+  }
+  .holder img{
+    width:49%;
+    height:23vh;
+  }
+  .center_text .x{
+    letter-spacing: 0px;
+    text-align: left;
+    left: 6px;
+  }
+  .br_on_mobile{
+    display: block;
+    height: 10px;
+  }
 }
