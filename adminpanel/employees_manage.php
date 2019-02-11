@@ -48,12 +48,46 @@ if(!$post == 'Owner' || $post == 'Manager'){
     $result2 =  mysqli_query($conn,$sql2);
     $key = 1;
     while($row2 = mysqli_fetch_assoc($result2)){
+      $user = $row2['uname'];
+      $c_post = $row2['company_post'];
+      $last_login = $row2['last_login'];
 echo "  <tr>
       <th scope='row'>".$key++."</th>
-      <td>".$row['uname']."</td>
-      <td>".$row['company_post']."</td>
-      <td>".$row['last_login']."</td>
-      <td><button type='button'  class='delete btn btn-danger'>Delete</button></td>
+      <td class='uname'>".$user."</td>
+      <td>".$c_post."</td>
+      <td>".$last_login."</td>
+      <td><button type='button'  class='delete btn btn-danger'>Delete</button>
+";
+echo '<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Are You Sure To Delete '.$user.' ??</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       It will Delete '.$user.' From Admin Acess . 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" class="yes_delete btn btn-primary">Yes<input type="hidden" class="hidden_user" value='.$user.'></button>
+      </div>
+      <div class="d_response" style="
+    text-align: center;
+    background: black;
+    color: yellow;
+    font-family: monospace;
+    font-weight: 800;
+    font-size:15px;
+    display:none;
+">Admin Deleted</div>
+    </div>
+  </div>
+</div>';
+echo"
+      </td>
     </tr>";
 
     }
@@ -65,7 +99,7 @@ echo "  <tr>
 
 </div>
 
-
+<br><br>
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Add Admins</h5>
@@ -76,8 +110,8 @@ echo "  <tr>
       	<input type="password" id="pwd" placeholder="Password of Admin" class='form-control'><br>
       	<label for="uname">Post in Company</label>
       	<input type="text" id="post" placeholder="Designation" class='form-control'><br>
-      	<button id="add_admin" class='btn btn-primary'>Add New Admin</button>
-      	<span></span>
+      	<button id="add_admin" class='btn btn-primary'>Add New Admin</button><br>
+      	<span class='response' style='color:green;font-family: Raleway;'></span>
 
       </p>
       <p class="card-text"><small class="text-muted">Fill Every Details Carefully</small></p>
@@ -89,7 +123,25 @@ echo "  <tr>
 <script>
 	$(".delete").click(function(){
 	
+
+  $(this).parent().find('.modal').modal('show')
+
+
 	})
+  $('.yes_delete').click(function(){
+    var user = $(this).find('input').val()
+ $.post("admin_ajaxs/employee_ajax.php",{
+  delete_user:"200",
+  uname : user
+ },function(data){
+$('.d_response').css('display','block')
+setTimeout(function(){
+  $('.d_response').css('display','none');
+  $('modal').modal('hide');
+  location.reload()
+},3000)
+ })
+})
 	
 
 	$('#add_admin').click(function(){
@@ -104,9 +156,7 @@ echo "  <tr>
 				
 			}
 		})
-alert(invalid)
 	if(invalid == 0){
-		alert('a')
 		$.post('admin_ajaxs/employee_ajax.php',{
 			uname : $('#uname').val(),
 			pwd : $('#pwd').val(),
@@ -114,7 +164,11 @@ alert(invalid)
 			add_admin : "200"
 
 		},function(data){
-$('span')
+$('.response').html(data)
+setTimeout(function(){
+ $('.response').html('') 
+location.reload()
+},3000)
 		})
 	}
 

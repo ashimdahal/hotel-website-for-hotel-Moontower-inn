@@ -29,7 +29,7 @@ while($row = mysqli_fetch_assoc($result)){
 		?>
   <a href="employees_manage.php">Add , Remove <br>Promote Employees</a>
 <?php } ?>
-  <a href="#services">Manage Rooms</a>
+  <a href="room_manage.php?id='1'">Manage Rooms</a>
   <a href="#clients">Manage Travel Tourism</a>
   <a href="#contact">Booking Payments and Customers</a>
 </div>

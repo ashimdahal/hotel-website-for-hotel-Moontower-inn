@@ -20,8 +20,8 @@
   <nav>
     <img src='all_img/logo.png' class='logo' alt='Moon Tower Inn (Birtamod) Logo'/>
 <ul>
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Today's deal</a></li>
+  <li><a href="index.php">Home</a></li>
+  <li><a href="#">Food Menu</a></li>
     <li><a href="rooms.php">Rooms</a></li>
     <li><a href="#">Travels</a></li>
     <li><a href="#">About us</a></li>

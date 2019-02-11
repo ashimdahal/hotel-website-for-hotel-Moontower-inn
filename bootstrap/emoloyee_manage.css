@@ -21,12 +21,18 @@ font-family: Raleway;
 	}
 	.table-dark{
 		width: 40%!important;
-		position: relative;
+		position: absolute;
 		left:30%;
 		translate:(-50px);
 	}
 	.card{
+		margin-left: 2%;
 		width:22%;
 		position: relative;
 		top:-40px;
 	}
+.modal{
+	color:#000;
+	font-weight: 800;
+	font-family: Raleway;
+}

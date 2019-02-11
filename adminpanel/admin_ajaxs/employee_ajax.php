@@ -14,3 +14,10 @@ if($result){
 	echo "Oppsy ! A error";
 }
 }
+
+if(isset($_POST['delete_user'])){
+	$conn = mysqli_connect('localhost','root','','moontower_admins');
+	$user = $_POST['uname'];
+$sql  = "DELETE FROM admins_users WHERE uname='$user'";
+$result = mysqli_query($conn,$sql);
+}

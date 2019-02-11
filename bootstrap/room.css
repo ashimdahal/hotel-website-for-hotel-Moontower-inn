@@ -1,5 +1,6 @@
 html, body {
   margin: 0;
+  background: #f2f4fb !important;
   height: 100%; }
 
 .jumbtron {
@@ -7,12 +8,95 @@ html, body {
   width: 100%;
   height: 80vh;
   background-attachment: fixed;
-  text-align: center; }
+  text-align: center;
+  background-repeat: no-repeat !important; }
   .jumbtron .caption_1 {
     position: relative;
     top: 35vh;
     font-size: 50px;
     font-family: Abel;
-    font-weight: 900; }
+    width: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: solid; }
+  .jumbtron .avaibility_check {
+    border-radius: 6px;
+    box-shadow: 0px 2px 40px 0px #00ff12;
+    font-family: Raleway;
+    background: #fff;
+    width: 70%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .jumbtron .avaibility_check .user_input_cont {
+      margin-top: 1%; }
+      .jumbtron .avaibility_check .user_input_cont label {
+        font-size: 17px; }
+      .jumbtron .avaibility_check .user_input_cont input {
+        width: 20%; }
+      .jumbtron .avaibility_check .user_input_cont input, .jumbtron .avaibility_check .user_input_cont select {
+        position: relative;
+        top: 30px;
+        left: -5%;
+        height: 30px; }
+      .jumbtron .avaibility_check .user_input_cont option {
+        border: none;
+        width: 20px;
+        font-size: 15px;
+        font-family: Raleway;
+        height: 20px !important;
+        font-weight: 800; }
+      .jumbtron .avaibility_check .user_input_cont .chck_aval-btn {
+        box-shadow: 0px 0px 10px 0px;
+        border: none;
+        background: #00ff65;
+        width: 20%;
+        height: 30px;
+        position: relative;
+        left: 3%;
+        margin-top: 1%;
+        cursor: pointer; }
+
+.best_peice_container {
+  position: relative;
+  top: 20%;
+  font-family: Raleway;
+  font-size: 30px;
+  margin-left: 5%; }
+  .best_peice_container h2 {
+    color: #838383; }
+  .best_peice_container .images_videos .images, .best_peice_container .images_videos .images-flipped {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    float: left;
+    height: 300px !important;
+    width: 300px !important;
+    background-position: center !important;
+    background-size: 500px 500px !important;
+    transition: transform  4s ease-in-out !important; }
+  .best_peice_container .images_videos .card {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    float: left;
+    height: 300px !important;
+    width: 300px !important;
+    background-position: center !important;
+    background-size: 500px 500px !important;
+    transition: transform  0.5s ease-in-out !important;
+    transform-style: preserve-3d; }
+  .best_peice_container .images_videos .images-flipped {
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+    .best_peice_container .images_videos .images-flipped p {
+      font-weight: 1000;
+      color: #9e9e9e;
+      text-shadow: 0px 1px 12px; }
+  .best_peice_container .images_videos .card.flipped {
+    position: absolute;
+    transform: rotateY(180deg) !important;
+    box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25); }
 
 /*# sourceMappingURL=room.css.map */
