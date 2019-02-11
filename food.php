@@ -111,8 +111,8 @@ include_once 'header.php';
       <div class="br_on_mobile"> <br> </div><div class="br_on_mobile"> <br> </div>
 
 
-		  <p>Taste &#9989;  Quality &#9989;</p>
-		  <p>Best rates &#9989; Party items &#9989;</p>
+		  <div class="for_p_on_mobile"><p>Taste &#9989;  Quality &#9989;</p>
+		  <p>Best rates &#9989; Party items &#9989;</p></div>
 		  <div class="visit"">
 			  Visit today <br>
 			  Or call Us 023 112985

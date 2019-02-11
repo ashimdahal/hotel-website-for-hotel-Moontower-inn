@@ -545,7 +545,7 @@ letter-spacing: 0.3px;
   font-size: 42px;
   color: darkred; 
 }
-.below_the_belt p{
+.for_p_on_mobile p{
   font-family: 'Noto Serif', serif;
 text-align: center;
 font-size: 20px;
@@ -693,7 +693,7 @@ color: rgb(51, 3, 3);
   line-height: 21px;
   position: absolute;
   right: 0;
-     top: 72%;
+     top: 27vh;
 }
 .caption .border {
   width:80%;
@@ -807,7 +807,7 @@ color: rgb(51, 3, 3);
   height:24vh;
   top: 58vh;
 }
-.below_the_belt p{
+.for_p_on_mobile p{
   font-size: 20px;
    margin-top:24px;
 }
@@ -844,11 +844,17 @@ color: rgb(51, 3, 3);
 }
 @media only screen and (max-width: 360px){
   .x h4{
-    top:65%;
+    top:27vh;
     font-size: 16;
   }
-  .below_the_belt p{
+  .for_p_on_mobile p{
     margin-top: 20px;
+  }
+  .visit{
+    left: 0;
+  }
+  .x h3{
+    margin-top: 8vh;
   }
 
  
@@ -857,10 +863,16 @@ color: rgb(51, 3, 3);
 @media only screen and (max-width: 320px){
   .caption .border{
     padding: 2px;
+    top: 2vh;
+  }
+  .center_text a{
+    font-size: 18px;
+    line-height: 20px;
   }
   .x h4{
-    top:27vh;
+    top:26vh;
     font-size: 16px;
+    line-height: 16px;
   }
   .x h3{
     margin-top: 7vh;
@@ -871,7 +883,7 @@ color: rgb(51, 3, 3);
   .below_the_belt h1{
     font-size: 34px;
   }
-  .below_the_belt p{
+  .for_p_on_mobile p{
     margin-top: 7px;
     font-size: 16px;
     text-align: right;
@@ -879,5 +891,29 @@ color: rgb(51, 3, 3);
   .khana_ko_holder h1{
     font-size: 18px;
   }
+.food_menu_in_home .y{
+  line-height: 1;
+}
+.food_menu_in_home .h3{
+  top:25.5vh;
 
+  }
+}
+
+@media only screen and (width: 384px){
+  .x h4{
+    top: 27vh;
+  }
+  .below_the_belt h1{
+    font-size: 34px;
+  }.visit{
+  top : 42px;
+  left: 0;
+  line-height: 21px;
+}
+.for_p_on_mobile p{
+  text-align: right;
+  margin-top: 28px;
+  font-size: 18px;
+}
 }
