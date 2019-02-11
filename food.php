@@ -123,7 +123,7 @@ include_once 'header.php';
   </div>
    <script type="text/javascript">
 
-    if ($(window).width() < 420) 
+    if ($(window).width() < 820) 
     {
       $('.d-flex').slick({
         infinite:true,
@@ -137,7 +137,7 @@ include_once 'header.php';
       })
 
     }
-    else if ($(window).width() > 420) 
+    else if ($(window).width() > 820) 
     {
          $('.d-flex').slick(
 {
