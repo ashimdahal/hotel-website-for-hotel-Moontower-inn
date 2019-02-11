@@ -856,6 +856,25 @@ color: rgb(51, 3, 3);
   .x h3{
     margin-top: 8vh;
   }
+   .below_the_belt h1{
+    font-size: 34px;
+  }.visit{
+  top : 42px;
+  left: 0;
+  line-height: 21px;
+}
+.for_p_on_mobile{
+  margin-top: 6vh;
+}
+.for_p_on_mobile p{
+  text-align: right;
+  margin-top: 10px;
+  font-size: 18px;
+}
+ .khana_ko_holder h1{
+    font-size: 18px;
+  }
+
 
  
 }
