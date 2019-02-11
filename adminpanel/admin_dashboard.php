@@ -3,6 +3,7 @@ include 'page_secure.php';
 ?>
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 	<title>Moon Tower Inn's Admin Page</title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/admin_dash.css">
@@ -21,10 +22,16 @@ while($row = mysqli_fetch_assoc($result)){
 }
 
 	 ?>
+
+	 <div class="wrapper_of_homepage">
+	 	
+	 </div>
+
 <div class="sidenav">
 	<h5>Welcome , <?php echo $name; ?> ! </h5>
 	<a href="admin_dashboard.php">Home</a>
 	<?php if($post == 'Owner' || $post == 'Manager'){
+		
 
 		?>
   <a href="employees_manage.php">Add , Remove <br>Promote Employees</a>
