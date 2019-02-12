@@ -52,7 +52,7 @@
 </div>
 </div>
 </div>
-<?php 
+<?php
 $conn = mysqli_connect('localhost','root','','moontower_admins');
 $sql = "SELECT * FROM rooms WHERE best_peice='Yes' LIMIT 4";
 $result = mysqli_query($conn,$sql);
@@ -71,7 +71,7 @@ while($row = mysqli_fetch_assoc($result)){
 		$extractext = explode('.',$jsondecoded_img[0]);
 
 			echo "<div class='card'>
-			
+
 			<div class='images-flipped' style='height:200px;width:200px;background:#eee;'><p> ".$room_cat."<br><br>Capacity for:".$room_cap." </p></div>
 			<div class='images' style='height:200px;width:200px;' height='200px'></div>
 			</div>";
@@ -88,17 +88,17 @@ echo "</div>";
 
 
 			$('.card').click(function(){
-			
-	
+
+
 	$('.card').toggleClass('flipped');
-				
-				
-			
+
+
+
 			})
 			setInterval(function(){
 
 					if($('.avaibility_check').offset().top <= $('nav').offset().top+$('.avaibility_check').height()){
-					
+
 						$('.avaibility_check').css('opacity','0');
 						$('nav').css('background','#fff');
 						$('nav > ul > li> a').css('color','#000');
@@ -107,14 +107,14 @@ $('.avaibility_check').css('opacity','1');
 $('nav').css('background','');
 $('nav > ul > li> a').css('color','#fff');
 					}
-			
+
 					if($('.caption_1').offset().top <= $('nav').offset().top){
 						$('.caption_1').css('opacity','0');
-	
+
 					}else{
 $('.caption_1').css('opacity','1');
 					}
-			
+
 
 			},100)
 
@@ -125,7 +125,7 @@ $('.caption_1').css('opacity','1');
 		$('.best_peice_container').animate({opacity:'1'},1500)
 		})
 
-			
+
 			$('.chck_aval-btn').click(function(){
 				var invalid = 0;
 				$(this).parent().find('input,select').each(function(){
@@ -138,7 +138,7 @@ $('.caption_1').css('opacity','1');
 				})
 
 				if(invalid == 0){
-				
+
 $.post("user_ajaxs/room_ajax.php",{
 	check_in:$('#check_in').val(),
 	check_out : $('#check_out').val(),
@@ -146,13 +146,13 @@ $.post("user_ajaxs/room_ajax.php",{
 	check_avaibility : "200"
 
 },function(data){
-	
+
 var regex =  new RegExp('Your Room is Available');
 if(regex.test(data)){
 var newdata = data.split('<>');
 $('.response').css('display','block')
 $('.response').html(newdata[1])
- 
+
 //MAKE A FUNCTION FOR SCROLLING DOWN TO RECOMMENDED ROOMS
 
 
@@ -168,5 +168,3 @@ $('.response').html(newdata[1])
 		</script>
 	</div>
 </div>
-</body>
-</html>

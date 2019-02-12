@@ -17,17 +17,7 @@
   crossorigin="anonymous"></script>
 </head>
 
-  <nav>
-    <img src='all_img/logo.png' class='logo' alt='Moon Tower Inn (Birtamod) Logo'/>
-<ul>
-  <li><a href="index.php">Home</a></li>
-  <li><a href="#">Food Menu</a></li>
-    <li><a href="rooms.php">Rooms</a></li>
-    <li><a href="#">Travels</a></li>
-    <li><a href="#">About us</a></li>
 
-</ul>
-  </nav>
 </header>
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -72,7 +62,7 @@
     <ul>
       <li><a href="index.php">Home</a></li>
       <li><a href="food.php">Food Menu</a></li>
-        <li><a href="#">Rooms</a></li>
+        <li><a href="rooms.php">Rooms</a></li>
         <li><a href="#">Travels</a></li>
         <li><a href="about.php">About us</a></li>
 
@@ -91,7 +81,7 @@
     <ul>
       <li><a href="index.php">Home</a></li>
       <li><a href="food.php">Food Menu</a></li>
-        <li><a href="#">Rooms</a></li>
+        <li><a href="rooms.php">Rooms</a></li>
         <li><a href="#">Travels</a></li>
         <li><a href="about.php">About us</a></li>
 
@@ -150,10 +140,10 @@
            $(".dallo").toggle(0)
     $('.closebtn').hide(200)
          })
-  
+
 }else if($(window).width() > 481) {
   var lastScroll = 0;
-          
+
          $(window).scroll(function(e){
              var st = $(this).scrollTop();
              if (st > 20){
@@ -173,7 +163,7 @@
              }
              lastScroll = st;
          });
-      
+
 
       $('.menubotton').click(function(){
              $(".navonbottom").css({
@@ -194,7 +184,6 @@
          })
 }
 
-   
+
 
     </script>
-
