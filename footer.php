@@ -39,7 +39,7 @@
 
 				<p class="footer-company-about">
 					<span>About the Developers</span>
-					This site was developed by Ashim && Dewanik!
+					Developed with &hearts; by <a href='https://www.facebook.com/alwaysonlin'>Ashim</a> and <a href='https://www.facebook.com/minu.shiwakoti'>Dewanik</a> &hearts;
 				</p>
 
 				<div class="footer-icons">

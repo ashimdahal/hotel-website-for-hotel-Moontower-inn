@@ -72,6 +72,7 @@ html , body{
 }
 
 .best_peice_container{
+height:100%;
         position: relative;
     top: 20%;
     font-family:Raleway;
@@ -82,7 +83,7 @@ html , body{
     }
     .images_videos{
 .images,.images-flipped{
-position:absolute;
+position:relative;
 display:block;
 cursor:pointer;
     float:left;
@@ -95,10 +96,13 @@ height: 300px!important;
 
 }
 .card{
-   position:absolute;
+   position:relative;
 display:block;
 cursor:pointer;
     float:left;
+    margin-left:10%;
+    left:-10%;
+    margin-top:3%;
 height: 300px!important;
     width: 300px!important;
     background-position: center!important;
@@ -116,7 +120,7 @@ height: 300px!important;
   }
 }
 .card.flipped{
-position:absolute;
+position:relative;
 
     transform:rotateY(180deg) !important;
    
