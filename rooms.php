@@ -53,7 +53,7 @@
 </div>
 </div>
 </div>
-<?php 
+<?php
 $conn = mysqli_connect('localhost','root','','moontower_admins');
 $sql = "SELECT * FROM rooms WHERE best_peice='Yes' LIMIT 4";
 $result = mysqli_query($conn,$sql);
@@ -82,6 +82,7 @@ while($row = mysqli_fetch_assoc($result)){
 
 		$extractext = explode('.',$jsondecoded_img[0]);
 
+<<<<<<< HEAD
 			echo "<div class='card_cont'><div class='card' data-toggle='tooltip' data-placement='top' title='Click me to know more !' value='".$jsondecoded_img[0]."''>
 
 			
@@ -156,6 +157,13 @@ echo'
 
 
 
+=======
+			echo "<div class='card'>
+
+			<div class='images-flipped' style='height:200px;width:200px;background:#eee;'><p> ".$room_cat."<br><br>Capacity for:".$room_cap." </p></div>
+			<div class='images' style='height:200px;width:200px;' height='200px'></div>
+			</div>";
+>>>>>>> 944baeb203358a6e204e0539d5ec77346b96664e
 echo "<script>
 
 
@@ -423,17 +431,26 @@ var modal = $(this).attr('value');
 $(this).parent().parent().parent().parent().find('.modal').modal('show')
 })
 			$('.card').click(function(){
+<<<<<<< HEAD
 			
 	
 	$(this).toggleClass('flipped');
 				
 				
 			
+=======
+
+
+	$('.card').toggleClass('flipped');
+
+
+
+>>>>>>> 944baeb203358a6e204e0539d5ec77346b96664e
 			})
 			setInterval(function(){
 
 					if($('.avaibility_check').offset().top <= $('nav').offset().top+$('.avaibility_check').height()){
-					
+
 						$('.avaibility_check').css('opacity','0');
 						$('nav').css('background','#fff');
 						$('nav > ul > li> a').css('color','#000');
@@ -442,14 +459,14 @@ $('.avaibility_check').css('opacity','1');
 $('nav').css('background','');
 $('nav > ul > li> a').css('color','#fff');
 					}
-			
+
 					if($('.caption_1').offset().top <= $('nav').offset().top){
 						$('.caption_1').css('opacity','0');
-	
+
 					}else{
 $('.caption_1').css('opacity','1');
 					}
-			
+
 
 			},100)
 
@@ -460,7 +477,7 @@ $('.caption_1').css('opacity','1');
 		$('.best_peice_container').animate({opacity:'1'},1500)
 		})
 
-			
+
 			$('.chck_aval-btn').click(function(){
 				var invalid = 0;
 				$(this).parent().find('input,select').each(function(){
@@ -473,7 +490,7 @@ $('.caption_1').css('opacity','1');
 				})
 
 				if(invalid == 0){
-				
+
 $.post("user_ajaxs/room_ajax.php",{
 	check_in:$('#check_in').val(),
 	check_out : $('#check_out').val(),
@@ -481,13 +498,14 @@ $.post("user_ajaxs/room_ajax.php",{
 	check_avaibility : "200"
 
 },function(data){
-	
+
 var regex =  new RegExp('Your Room is Available');
 if(regex.test(data)){
 var newdata = data.split('<>');
 $('.response').css('display','block')
 $('.response').html(newdata[1])
 
+<<<<<<< HEAD
 var  datessplit = newdata[0].split('}')
 $.post("user_ajaxs/room_ajax.php",{
 	getrooms : "200",
@@ -502,6 +520,8 @@ $('html,body').animate({scrollTop:$('.room_containers').offset().top},1500)
 
 })
  
+=======
+>>>>>>> 944baeb203358a6e204e0539d5ec77346b96664e
 //MAKE A FUNCTION FOR SCROLLING DOWN TO RECOMMENDED ROOMS
 
 
@@ -517,6 +537,9 @@ $('html,body').animate({scrollTop:$('.room_containers').offset().top},1500)
 		</script>
 	</div>
 </div>
+<<<<<<< HEAD
 
 </body>
 </html>
+=======
+>>>>>>> 944baeb203358a6e204e0539d5ec77346b96664e

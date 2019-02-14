@@ -79,7 +79,7 @@ font-weight:8;
 
       background-position: center;
 
-      background:  url('https://cdn.hotelplanner.com/Common/Images/_HotelPlanner/Home-Page/fade/sld6.jpg') fixed;
+      background-attachment:  fixed;
 
 
 }
@@ -317,7 +317,7 @@ transform: translate(-50%);
   font: bold 16px sans-serif;
 
   padding: 55px 50px;
-  
+
 }
 
 .footer-distributed .footer-left,
@@ -496,7 +496,7 @@ background: transparent;
 .slick-prev{
   background-color: #89889bd5;
   border: none;
- 
+
   display: none;
 }
 .slick-next{
@@ -543,7 +543,7 @@ letter-spacing: 0.3px;
 .below_the_belt h1{
   font-family: 'Felipa', cursive;
   font-size: 42px;
-  color: darkred; 
+  color: darkred;
 }
 .for_p_on_mobile p{
   font-family: 'Noto Serif', serif;
@@ -564,10 +564,10 @@ font-weight: 900;
 color: rgb(51, 3, 3);
 }
 .wrapper_about_us{
- 
+
   position:relative;
   width: 100%;
-  background-color:rgb(2, 15, 27); 
+  background-color:rgb(2, 15, 27);
 }
 .first_text_holder{
   width: 80%;
@@ -694,7 +694,7 @@ color: rgb(51, 3, 3);
    text-shadow: 1px 2px 1px  #26ff06;
 }
 .holder{
- 
+
   text-align: center;
   width: 100%;
 
@@ -894,11 +894,11 @@ color: rgb(51, 3, 3);
     height: 15vh;
   }
   .navontop ul li{
-    margin-left: 8%; 
+    margin-left: 8%;
   }
  .holder{
   width: 100%;
- } 
+ }
  .img-thumbnail{
   height:34vh;
  }
@@ -980,7 +980,7 @@ color: rgb(51, 3, 3);
   }
   .dallo{
     display: none;
-   
+
     background: #181716fc;;
   }.navonbottom{
     display: block;
@@ -995,7 +995,7 @@ color: rgb(51, 3, 3);
     width: 100%;
     z-index: 12;
     background: rgb(17, 11, 39);
-  
+
   }
   .menubotton{
     height:63px;
@@ -1199,7 +1199,7 @@ color: rgb(51, 3, 3);
   }
   .dallo{
     display: none;
-   
+
     background: #181716fc;;
   }.navonbottom{
     display: block;
@@ -1217,7 +1217,7 @@ color: rgb(51, 3, 3);
     width: 100%;
     z-index: 12;
     background: rgb(17, 11, 39);
-  
+
   }
   .menubotton{
     height:63px;
@@ -1461,7 +1461,7 @@ color: rgb(51, 3, 3);
   }
 
 
- 
+
 }
 
 @media only screen and (width: 320px){
