@@ -44,7 +44,7 @@ while($row = mysqli_fetch_assoc($result)){
   <a href="homemanage.php">Manage Homepage</a>
 
   <a href="#clients">Manage Travel Tourism</a>
-  <a href="#contact">Booking Payments and Customers</a>
+  <a href="admin_bookings.php">Booking Payments and Customers</a>
 </div>
 </body>
 </html>

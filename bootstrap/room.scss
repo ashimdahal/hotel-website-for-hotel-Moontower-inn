@@ -137,3 +137,19 @@ position:relative;
 
 
 }
+
+@media (min-width:300px) and (max-width:330px){
+.avaibility_check{
+opacity:1;
+.user_input_cont{
+  input,select{
+  margin-top:5%;
+  width:80% !important;
+  left:0%!important;
+  }
+  label{
+  left:30%!important;
+  }
+}
+}
+}

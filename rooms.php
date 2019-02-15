@@ -60,7 +60,7 @@ $result = mysqli_query($conn,$sql);
 $check = mysqli_num_rows($result);
 if($check > 0){
 ?>
-<div class='best_peice_container' style='opacity:0' >
+<div class='best_peice_container'  >
 <h2>The  , Rooms designed for you at its most <br>Welcomes You <span style='color:red;'>&hearts;</span></h2>
 <div class='images_videos' style="position: relative;top:10px;">
 <?php
@@ -82,7 +82,7 @@ while($row = mysqli_fetch_assoc($result)){
 
 		$extractext = explode('.',$jsondecoded_img[0]);
 
-<<<<<<< HEAD
+
 			echo "<div class='card_cont'><div class='card' data-toggle='tooltip' data-placement='top' title='Click me to know more !' value='".$jsondecoded_img[0]."''>
 
 			
@@ -147,7 +147,8 @@ echo'
            </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="book_room_highlightroom btn btn-primary">Book This Room
+        <input type="hidden" value='.$room_code.'></button>
       </div>
     </div>
   </div>
@@ -157,13 +158,8 @@ echo'
 
 
 
-=======
-			echo "<div class='card'>
 
-			<div class='images-flipped' style='height:200px;width:200px;background:#eee;'><p> ".$room_cat."<br><br>Capacity for:".$room_cap." </p></div>
-			<div class='images' style='height:200px;width:200px;' height='200px'></div>
-			</div>";
->>>>>>> 944baeb203358a6e204e0539d5ec77346b96664e
+			
 echo "<script>
 
 
@@ -311,7 +307,7 @@ for ($i=0; $i <7 ; $i++) {
 <label for="rphoto" style="cursor: pointer;"><img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" height="100px"></label><br><br>
 <input type="file" class="form-control" style="display: none;" id="rphoto">
  <label for="nrooms">Numbers of Rooms You Prefer</label>
- <select class="form-control">
+ <select id="nrooms" class="form-control">
 	<?php
 for ($i=0; $i <7 ; $i++) { 
 	echo "<option>".$i."</option>";
@@ -339,6 +335,18 @@ for ($i=0; $i <7 ; $i++) {
 <input type="hidden" class="room_code" value="direct">
         </button>
       </div>
+      	<div class="response" style="
+    background: black;
+    width: 100%;
+     height: 100%;
+    margin-top: 20px;
+    font-family: Raleway;
+    font-weight: 800;
+    color: lime;
+    text-align: center;
+    padding-top: 20px;
+    display: none;
+"></div>
     </div>
   </div>
 </div>
@@ -347,8 +355,10 @@ for ($i=0; $i <7 ; $i++) {
 
 <?php include 'footer.php';?>
 		<script>
+var fd = new FormData;
 var rfiles = 0;		
-var codes_direct;
+var codes_direct = "Random";
+
 
 $('.reservation').find('.modal-footer').find('.book_room').click(function(){
 	var invalid  = 0;
@@ -378,8 +388,39 @@ $('.reservation').find('.modal-footer').find('.book_room').click(function(){
 
 if(invalid == 0){
 
-$.post("adminpanel/")
-
+var fname = $('.reservation').find('.modal-body').find('#fname').val();
+var lname = $('.reservation').find('.modal-body').find('#lname').val();
+var age = $('.reservation').find('.modal-body').find('#rage').val();
+var adult = $('.reservation').find('.modal-body').find('#nadult').val();
+var child = $('.reservation').find('.modal-body').find('#nchilds').val();
+var resrvercno = $('.reservation').find('.modal-body').find('#cno').val();
+var total_room = $('.reservation').find('.modal-body').find('#nrooms').val();
+fd.append('fname',fname);
+fd.append('lname',lname);
+fd.append('age',age);
+fd.append('adult',adult);
+fd.append('child',child);
+fd.append('resrvercno',resrvercno);
+fd.append('rooms',total_room);
+fd.append('file',rfiles);
+fd.append('room_code',codes_direct);
+fd.append('user_booking','200')
+		$.ajax({
+  url : 'user_ajaxs/room_ajax.php',
+  data:fd,
+  processData: false,
+  contentType: false,
+  type: 'POST',
+  success: function(data){
+  	console.log(data)
+ $('.reservation').find('.response').html(data)
+ $('.reservation').find('.response').css('display','block')
+ setTimeout(function(){
+ 	 $('.reservation').find('.response').html('')
+ $('.reservation').find('.response').css('display','none')
+ },2000)
+  }
+})
 
 }
 
@@ -406,14 +447,18 @@ function readURL(input) {
 $('.reservation').find('input[type="file"]').on('change',function(){
 	readURL(this)
 })
-
+$('.book_room_highlightroom').click(function(){
+	var room_code = $(this).find('input[type="hidden"]').val()
+		codes_direct = room_code;
+	$('.reservation').find('.modal-footer').find('.book_room').find('input').val(room_code);
+})
 
 $('.my_rooms>div').click(function(){
 	var room_code = $(this).parent().find('input[type="hidden"]').val();
 	codes_direct = room_code;
 	$('.reservation').find('.modal-footer').find('.book_room').find('input').val(room_code);
 })
-$('.reserve_button,.my_rooms>div').click(function(){
+$('.reserve_button,.my_rooms>div,.book_room_highlightroom').click(function(){
 $('.reservation').modal('show')
 
 })
@@ -431,27 +476,23 @@ var modal = $(this).attr('value');
 $(this).parent().parent().parent().parent().find('.modal').modal('show')
 })
 			$('.card').click(function(){
-<<<<<<< HEAD
+
 			
 	
 	$(this).toggleClass('flipped');
 				
 				
-			
-=======
-
-
-	$('.card').toggleClass('flipped');
+		
 
 
 
->>>>>>> 944baeb203358a6e204e0539d5ec77346b96664e
+
 			})
 			setInterval(function(){
 
 					if($('.avaibility_check').offset().top <= $('nav').offset().top+$('.avaibility_check').height()){
 
-						$('.avaibility_check').css('opacity','0');
+						$('.avaibility_check').css('opacity','1');
 						$('nav').css('background','#fff');
 						$('nav > ul > li> a').css('color','#000');
 					}else{
@@ -505,10 +546,11 @@ var newdata = data.split('<>');
 $('.response').css('display','block')
 $('.response').html(newdata[1])
 
-<<<<<<< HEAD
 var  datessplit = newdata[0].split('}')
 $.post("user_ajaxs/room_ajax.php",{
 	getrooms : "200",
+	user_chin : $('#check_in').val(),
+	user_chout : $('#check_out').val(),
 	roomchin : datessplit[0],
 	roomchout :  datessplit[1]
 
@@ -519,9 +561,7 @@ $('html,body').animate({scrollTop:$('.room_containers').offset().top},1500)
 },2000)
 
 })
- 
-=======
->>>>>>> 944baeb203358a6e204e0539d5ec77346b96664e
+
 //MAKE A FUNCTION FOR SCROLLING DOWN TO RECOMMENDED ROOMS
 
 
@@ -537,9 +577,8 @@ $('html,body').animate({scrollTop:$('.room_containers').offset().top},1500)
 		</script>
 	</div>
 </div>
-<<<<<<< HEAD
+
 
 </body>
 </html>
-=======
->>>>>>> 944baeb203358a6e204e0539d5ec77346b96664e
+

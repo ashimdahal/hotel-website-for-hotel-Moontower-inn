@@ -64,7 +64,7 @@
       <li><a href="index.php">Home</a></li>
       <li><a href="food.php">Food Menu</a></li>
         <li><a href="rooms.php">Rooms</a></li>
-        <li><a href="booking.php">Your Bookings</a></li>
+        <li><a href="bookings.php">Your Bookings</a></li>
        <!-- <li><a href="#">Travels</a></li>-->
         <li><a href="#">Travels</a></li>
         <li><a href="about.php">About us</a></li>
@@ -86,7 +86,7 @@
       <li><a href="food.php">Food Menu</a></li>
         <li><a href="rooms.php">Rooms</a></li>
 
-         <li><a href="booking.php">Your Bookings</a></li>
+         <li><a href="bookings.php">Your Bookings</a></li>
        <!-- <li><a href="#">Travels</a></li>-->
 
         <li><a href="#">Travels</a></li>

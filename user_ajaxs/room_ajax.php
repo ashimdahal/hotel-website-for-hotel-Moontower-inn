@@ -41,7 +41,8 @@ if(isset($_POST['getrooms'])){
 
 $roomchin = $_POST['roomchin'];
 $roomchout =  $_POST['roomchout'];
-  $forcookie = $_POST['roomchin'].','.$_POST['roomchout'];
+  $forcookie = $_POST['roomchin'].'{'.$_POST['roomchout'];
+   $forcookie_user = $_POST['user_chin'].'{'.$_POST['user_chout'];
   $conn = mysqli_connect('localhost','root','','moontower_admins');
 $sql = "SELECT * FROM rooms WHERE room_checkin ='$roomchin' and room_checkout = '$roomchout'";
 $result = mysqli_query($conn,$sql);
@@ -74,9 +75,54 @@ while($row = mysqli_fetch_assoc($result)){
 }
 setcookie('chav','200',time()+(86400),"/");
 setcookie('chav_in_out',$forcookie,time()+(86400),"/");
+setcookie('chav_in_out_user',$forcookie_user,time()+(86400),"/");
 
 
 }
 
+if(isset($_POST['user_booking'])){
+if(isset($_COOKIE['chav'])){
+  $conn = mysqli_connect('localhost','root','','moontower_admins');
+  $ch_in_out_user = explode('{',$_COOKIE['chav_in_out_user']);
+  $check_in_user = $ch_in_out_user[0];
+  $check_out_user = $ch_in_out_user[1];
+  $photo_ext = explode('.',$_FILES['file']['name']);
+  $photo_ext = end($photo_ext);
+  $uniq_code = uniqid('',true);
+  $new_ppname = $uniq_code.'.'.$photo_ext;
+  $filedir = 'user_ajaxs/bookers_pp/'.$new_ppname;
+  move_uploaded_file($_FILES['file']['tmp_name'],'bookers_pp/'.$new_ppname);
+  $fname = mysqli_real_escape_string($conn,$_POST['fname']);
+  $lname = mysqli_real_escape_string($conn,$_POST['lname']);
+  $age = mysqli_real_escape_string($conn,$_POST['age']);
+  $people = mysqli_real_escape_string($conn,$_POST['adult']) +mysqli_real_escape_string($conn,$_POST['child']) ;
+  $cno = mysqli_real_escape_string($conn,$_POST['resrvercno']);
+  $total_room = mysqli_real_escape_string($conn,$_POST['rooms']);
+  if($_POST['room_code'] != 'direct'){
+ $room_code = $_POST['room_code'];
+  }else{
+     $room_code = "Random";
+  }
+$date = date('Y-m-d h:i:s');
+$sql = "INSERT INTO reservations_req(fname,lname,rage,cno,room_code,checkin,checkout,pphoto,total_people,
+no_rooms,user_code,added_date)
+VALUES('$fname','$lname','$age','$cno','$room_code','$check_in_user','$check_out_user','$filedir','$people','$total_room','$uniq_code','$date')";
+$result = mysqli_query($conn,$sql);
+if($result){
+  echo "Your Room is Booked , Please Do check Your Bookings Page . Thank You - Moontower Inn";
+ $uniq_codes = $_COOKIE['booked_user_code'].','.$uniq_code;
+  if(isset($_COOKIE['booked_user_code'])){
+setcookie('booked_user_code',$uniq_codes,time()+(86400*30),"/");
+  }else{
+    
+ setcookie('booked_user_code',$uniq_code,time()+(86400*730),"/");
+  }
+}
 
+
+
+}else{
+  echo "Please Do Check Room Avaibility Then Book Your Rooms.";
+}
+}
 
